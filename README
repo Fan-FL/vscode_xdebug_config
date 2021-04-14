@@ -1,0 +1,6 @@
+Visual Studio Code
+1. Install the PHP Debug plugin.
+2. Open the debug panel.
+VSCode Debug Console
+3. Click on the "config" button (the cogwheel) and select PHP.
+There is no need to modify the default launch.json file.
