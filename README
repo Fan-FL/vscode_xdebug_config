@@ -4,3 +4,29 @@ Visual Studio Code
 VSCode Debug Console
 3. Click on the "config" button (the cogwheel) and select PHP.
 There is no need to modify the default launch.json file.
+
+zend_extension = /usr/lib/php/20190902/xdebug.so
+xdebug.mode=debug
+xdebug.client_host = 127.0.0.1
+xdebug.client_port = 9000
+xdebug.start_with_request=trigger
+xdebug.file_link_format = vscode://file/%f:%l
+
+
+
+sudo apt install php-xdebug 
+or sudo apt install php7.4-xdebug depending on the php version
+
+I remember I did something else to make it work.
+If something goes wrong, copy the whole phpinfo content to https://xdebug.org/wizard.
+
+sudo nano /etc/php/7.4/mods-available/xdebug.ini
+
+zend_extension = /usr/lib/php/20190902/xdebug.so
+xdebug.mode=debug
+xdebug.client_host = 127.0.0.1
+xdebug.client_port = 9000
+xdebug.start_with_request=trigger
+xdebug.file_link_format = vscode://file/%f:%l
+
+sudo service apache2 restart
